@@ -15,19 +15,13 @@
 
 ## Quick Information
 
-This is a firmware for reprap single-processor electronics setups.
-It also works on the Ultimaker PCB. It supports printing from SD card+Folders, and look-ahead trajectory planning.
-This firmware is a mashup between [Sprinter](https://github.com/kliment/Sprinter), [grbl](https://github.com/simen/grbl) and many original parts.
+This is a hack of the Marlin 3D printer firmware that uses the stepper motors to play a song stored in flash memory. Supports 3-channel polyphonic sound using the X, Y, and Z axis. Some limited timbre control is acheived by adjusting microstepping (requires a printer with digital microstepping control).
 
-## Current Status: Bug Fixing
+This project is based on and inspired by [256byteram] who built an 8080 computer and made it play the Portal song. I used his transcription of the music and wrote a compatible interpreter.
 
-The Marlin development is currently revived. There's a long list of reported issues and pull requests, which we are working on currently.
-We are actively looking for testers. So please try the current development version and report new issues and feedback.
+__M808:__ Start playing music
 
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/2224/badge.svg)](https://scan.coverity.com/projects/2224)
-[![Travis Build Status](https://travis-ci.org/MarlinFirmware/Marlin.svg)](https://travis-ci.org/MarlinFirmware/Marlin)
-
-What bugs are we working on: [Bug Fixing Round 2](https://github.com/MarlinFirmware/Marlin/milestones/Bug%20Fixing%20Round%202)
+For more information, visit the [Hackaday Project page](https://hackaday.io/project/4218-playing-music-with-a-3d-printer).
 
 ## Contact
 

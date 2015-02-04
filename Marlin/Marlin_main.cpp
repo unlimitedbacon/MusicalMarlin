@@ -47,6 +47,7 @@
 #include "language.h"
 #include "pins_arduino.h"
 #include "math.h"
+#include "music.h"
 
 #ifdef BLINKM
   #include "BlinkM.h"
@@ -174,6 +175,7 @@
 // M908 - Control digital trimpot directly.
 // M350 - Set microstepping mode.
 // M351 - Toggle MS1 MS2 pins directly.
+// M808 - Play a song
 
 // ************ SCARA Specific - This can change to suit future G-code regulations
 // M360 - SCARA calibration: Move to cal-position ThetaA (0 deg calibration)
@@ -3841,6 +3843,9 @@ case 404:  //M404 Enter the nominal filament width (3mm, 1.75mm ) N<3.0> or disp
       microstep_readings();
       #endif
     }
+    break;
+    case 808: // M808 Play a song
+      play_music();
     break;
     case 999: // M999: Restart after being stopped
       Stopped = false;
